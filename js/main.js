@@ -27,21 +27,21 @@ function submitForm(event) {
   if (isValueEmpty(firstname)) {
     setErrorMessage(firstname, 'Fornavn skal udfyldes')
   } else if (isValueLengthLessThen(firstname, 2)) {
-    setErrorMessage(firstname, 'Dit navn skal være større end to tegn')
+    setErrorMessage(firstname, 'Dit fornavn skal være mindst to tegn')
   }
 
   // hvis efternavn er tomt eller kun er på 1 tegn, så vis en fejl besked
   if (isValueEmpty(lastname)) {
     setErrorMessage(lastname, 'Efternavn skal udfyldes')
   } else if (isValueLengthLessThen(lastname, 2)) {
-    setErrorMessage(lastname, 'Dit efternavn skal være større end to tegn')
+    setErrorMessage(lastname, 'Dit efternavn skal være mindst to tegn')
   }
 
   // hvis adresse er tomt, eller adressen kun er 1 tegn eller der findes specielkaraktere i adresse, så vis en fejl besked
   if (isValueEmpty(address)) {
     setErrorMessage(address, 'Adresse skal udfyldes')
   } else if (isValueLengthLessThen(address, 2)) {
-    setErrorMessage(address, 'Addressen skal være større end to tegn')
+    setErrorMessage(address, 'Addressen skal være mindst to tegn')
   } else if (noSpecialSignsRegex.test(address.value)) {
     setErrorMessage(address, 'Adressen kan ikke indeholde specialtegn')
   }
@@ -69,7 +69,7 @@ function submitForm(event) {
 
   // hvis password er under 8 karakterer, så vis en fejl besked
   if (isValueLengthLessThen(password, 8)) {
-    setErrorMessage(password, 'Dit password skal være 8 karakterer langt')
+    setErrorMessage(password, 'Dit password skal være mindst 8 karakterer langt')
   }
 
   // hvis password gentagelsen ikke er ens med det første password så vis en besked
