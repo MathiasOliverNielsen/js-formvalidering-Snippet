@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./js/main.js" defer></script>
+    <title>Form validering</title>
+  </head>
+  <body>
+    <h1>Form validering</h1>
+    <form onsubmit="submitForm(event)" id="signupform">
+      <label for="firstname" aria-label="First name">Fornavn: </label>
+      <input id="firstname" name="firstname" type="text" placeholder="Indtast dit fornavn" />
+
+      <label for="lastname" aria-label="Last name">Efternavn: </label>
+      <input id="lastname" name="lastname" type="text" placeholder="Indtast dit efternavn" />
+
+      <label for="address" aria-label="Address">Adresse: </label>
+      <input id="address" name="address" type="text" placeholder="Indtast din adresse" />
+
+      <label for="zipcode" aria-label="Zip code">Postnummer </label>
+      <input id="zipcode" name="zipcode" type="number" placeholder="Indtast dit postnummer" />
+
+      <label for="country" aria-label="Country">Land: </label>
+      <input id="country" name="country" type="text" placeholder="Indtast dit land" />
+
+      <label for="email" aria-label="Email">Email: </label>
+      <input id="email" name="email" type="email" placeholder="Indtast din email" />
+
+      <label for="password" aria-label="Password">Password: </label>
+      <input id="password" name="password" type="password" placeholder="Indtast dit password" />
+
+      <label for="passwordRepeat" aria-label="Password">Gentag password: </label>
+      <input
+        id="passwordRepeat"
+        name="passwordRepeat"
+        type="password"
+        placeholder="Indtast dit password igen"
+      />
+
+      <input type="submit" value="Submit " />
+    </form>
+  </body>
+</html>
