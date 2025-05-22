@@ -100,7 +100,7 @@ function isValueLength(field, length) {
 
 // Funktion til at tjekke om en værdis længde er mindre end "length" variablen
 function isValueLengthLessThen(field, length) {
-  if (field.value.length <= length) {
+  if (field.value.length < length) {
     return true
   } else return false
 }
